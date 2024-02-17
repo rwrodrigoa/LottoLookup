@@ -12,7 +12,7 @@ class DrawResultModel extends Model
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['draw_type', 'draw_number', 'draw_date'];
+    protected $allowedFields    = ['draw_type', 'draw_number', 'draw_result', 'draw_date'];
 
     protected bool $allowEmptyInserts = false;
 

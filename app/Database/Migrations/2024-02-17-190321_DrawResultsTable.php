@@ -24,6 +24,9 @@ class DrawResultsTable extends Migration
                 'constraint' => 11,
                 'unsigned' => true
             ],
+            'draw_result' => [
+                'type' => 'JSON',
+            ],
             'draw_date' => [
                 'type' => 'DATE'
             ],
