@@ -9,6 +9,19 @@ class ApiHelper
 
     protected $client;
 
+    public $draws = [
+        "maismilionaria",
+        "megasena",
+        "lotofacil",
+        "quina",
+        "lotomania",
+        "timemania",
+        "duplasena",
+        "federal",
+        "diadesorte",
+        "supersete"
+    ];
+
     public function __construct()
     {
         $this->client = new Client(['verify' => false]);
