@@ -82,10 +82,10 @@ class DrawsUpdate extends BaseCommand
 
                 if (!$existingRecord) {
                     $drawResultModel->insert($drawData);
-                    CLI::write('Dados de ' . ucfirst($url) . 'inseridos com sucesso no banco!', 'green');
+                    CLI::write('Dados de ' . ucfirst($url) . ' inseridos com sucesso no banco!', 'green');
                 } else {
                     $drawResultModel->update($existingRecord->id, $drawData);
-                    CLI::write('Dados de ' . ucfirst($url) . 'atualizados com sucesso no banco!', 'green');
+                    CLI::write('Dados de ' . ucfirst($url) . ' atualizados com sucesso no banco!', 'green');
                 }
 
             } catch (\Exception $e) {
