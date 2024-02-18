@@ -11,7 +11,8 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
-        "codeigniter4/framework": "^4.0"
+        "codeigniter4/framework": "^4.0",
+        "guzzlehttp/guzzle": "^7.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
