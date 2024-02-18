@@ -38,20 +38,6 @@ class DrawsUpdate extends BaseCommand
      */
     protected $usage = 'draws:update';
 
-
-    protected $urls = [
-        "maismilionaria",
-        "megasena",
-        "lotofacil",
-        "quina",
-        "lotomania",
-        "timemania",
-        "duplasena",
-        "federal",
-        "diadesorte",
-        "supersete"
-    ];
-
     /**
      * Actually execute a command.
      *
@@ -62,7 +48,7 @@ class DrawsUpdate extends BaseCommand
         $apiHelper = new ApiHelper();
         $drawResultModel = new DrawResultModel();
 
-        foreach ($this->urls as $url) {
+        foreach ($apiHelper->draws as $url) {
             $fullUrl = 'https://servicebus2.caixa.gov.br/portaldeloterias/api/' . $url;
 
             try {
