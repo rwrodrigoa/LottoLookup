@@ -12,6 +12,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "^4.0",
+        "codeigniter4/tasks": "dev-develop",
         "guzzlehttp/guzzle": "^7.8"
     },
     "require-dev": {
@@ -36,5 +37,7 @@
     },
     "scripts": {
         "test": "phpunit"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

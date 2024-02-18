@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e4a0b209e4a7070a9f1be7e6c675528",
+    "content-hash": "505e1714e573144c58a7077be31a28bc",
     "packages": [
         {
             "name": "codeigniter4/framework",
@@ -80,6 +80,120 @@
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
             "time": "2024-01-27T03:57:48+00:00"
+        },
+        {
+            "name": "codeigniter4/settings",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codeigniter4/settings.git",
+                "reference": "2748f2b4572d44a940f98c31847d65272cac5666"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codeigniter4/settings/zipball/2748f2b4572d44a940f98c31847d65272cac5666",
+                "reference": "2748f2b4572d44a940f98c31847d65272cac5666",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "codeigniter4/devkit": "^1.1.2",
+                "codeigniter4/framework": "^4.2.3",
+                "rector/rector": "0.18.13"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeIgniter\\Settings\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "**/Database/Migrations/**"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lonnie Ezell",
+                    "email": "lonnieje@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Settings library for CodeIgniter 4",
+            "homepage": "https://github.com/codeigniter4/settings",
+            "keywords": [
+                "Settings",
+                "codeigniter",
+                "codeigniter4"
+            ],
+            "support": {
+                "issues": "https://github.com/codeigniter4/settings/issues",
+                "source": "https://github.com/codeigniter4/settings/tree/v2.2.0"
+            },
+            "time": "2024-01-06T07:10:58+00:00"
+        },
+        {
+            "name": "codeigniter4/tasks",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codeigniter4/tasks.git",
+                "reference": "af45180ea8e04a162699bc55d7bed6b883199f38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codeigniter4/tasks/zipball/af45180ea8e04a162699bc55d7bed6b883199f38",
+                "reference": "af45180ea8e04a162699bc55d7bed6b883199f38",
+                "shasum": ""
+            },
+            "require": {
+                "codeigniter4/settings": "^2.0",
+                "ext-json": "*",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "codeigniter4/devkit": "^1.0",
+                "codeigniter4/framework": "^4.1",
+                "rector/rector": "0.19.8"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeIgniter\\Tasks\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "**/Database/Migrations/**"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lonnie Ezell",
+                    "email": "lonnieje@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Task Scheduler for CodeIgniter 4",
+            "homepage": "https://github.com/codeigniter4/tasks",
+            "keywords": [
+                "codeigniter",
+                "codeigniter4",
+                "cron",
+                "task scheduling"
+            ],
+            "support": {
+                "issues": "https://github.com/codeigniter4/tasks/issues",
+                "source": "https://github.com/codeigniter4/tasks/tree/develop"
+            },
+            "time": "2024-02-05T11:21:42+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2694,9 +2808,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "codeigniter4/tasks": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.4 || ^8.0"
