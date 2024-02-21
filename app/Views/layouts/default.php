@@ -1,7 +1,7 @@
 <?php
 /**
  * @var CodeIgniter\View\View $this
-*/
+ */
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +21,18 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#febbc0">
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="<?= base_url('assets/fontawesome/css/fontawesome.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/fontawesome/css/brands.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/fontawesome/css/solid.css') ?>">
+
+    <!-- BULMA -->
+    <link rel="stylesheet" href="<?= base_url('assets/bulma/bulma.min.css') ?>">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+
 </head>
 
 <body>
