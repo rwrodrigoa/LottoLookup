@@ -18,6 +18,7 @@ class ApiHelper
         "timemania",
         "duplasena",
         "federal",
+        "loteca",
         "diadesorte",
         "supersete"
     ];
