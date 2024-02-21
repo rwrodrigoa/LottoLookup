@@ -8,3 +8,6 @@ use CodeIgniter\Router\RouteCollection;
 
  // API Routes
 $routes->get('/api', 'APIController::index');
+$routes->get('/api/(:alpha)', 'APIController::draw/$1');
+$routes->get('/api/(:alpha)/latest', 'APIController::latest/$1');
+$routes->get('/api/(:alpha)/(:num)', 'APIController::draw/$1/$2');
