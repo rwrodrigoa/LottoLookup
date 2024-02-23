@@ -262,7 +262,7 @@
 <footer class="footer is-default">
     <div class="content has-text-centered">
         <p>
-            <strong>LottoLookup</strong> desenvolvido é por <a href="https://rodrigoweiss.com"
+            <strong>LottoLookup</strong> é desenvolvido por <a href="https://rodrigoweiss.com"
                 class="is-underlined">Rodrigo Weiss</a>. <br>
             O código fonte é licenciado pelo
             <a href="https://opensource.org/blog/license/mit" class="is-underlined">MIT</a>.
