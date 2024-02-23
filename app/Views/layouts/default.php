@@ -22,6 +22,11 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#febbc0">
 
+    <!-- FREDOKA FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="<?= base_url('assets/fontawesome/css/fontawesome.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/fontawesome/css/brands.css') ?>">

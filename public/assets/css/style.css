@@ -1,4 +1,27 @@
+* {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+}
+
+a {
+    color: inherit;
+}
+
+a.navbar-item:hover {
+    color: inherit;
+}
+
+.navbar-item, .navbar-link, .title, .subtitle {
+    color: #363636;
+}
+
+.message-header {
+    color: #363636;
+    background-color: #FFBBC2;
+}
+
+
 .is-default {
-    color: hsl(0, 0%, 21%);
+    color: #363636;
     background-color: #FFBBC2;
 }
