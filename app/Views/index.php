@@ -19,7 +19,7 @@
                 </div>
                 <div class="">
                     <span class="navbar-item">
-                        <a class="button is-black is-inverted">
+                        <a href="https://github.com/rwrodrigoa/LottoLookup" class="button is-black is-inverted">
                             <span class="icon">
                                 <i class="fab fa-github"></i>
                             </span>
@@ -47,124 +47,226 @@
 
 <div class="container content my-5 px-2">
     <h1>Bem vindo a API LottoLookup!</h1>
-    <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices
-        eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat
-        odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
-    <h2>Second level</h2>
-    <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit
-        amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem
-        rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
+    <p>
+        Bem-vindo à documentação da API LottoLookup! Esta API fornece acesso aos resultados dos jogos de loteria da
+        Caixa Econômica Federal. Aqui você encontrará informações sobre como utilizar a API para consultar os últimos
+        resultados de diversos jogos.
+    </p>
+    <h3>Loterias Suportadas</h3>
+    <p>
+        A API LottoLookup suporta os seguintes jogos de loteria:
+    </p>
     <ul>
-        <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-        <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-        <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
-        <li>Ut non enim metus.</li>
+        <li>Mais Milionária (<code class="has-text-weight-light">maismilionaria</code>)</li>
+        <li>Mega-Sena (<code class="has-text-weight-light">megasena</code>)</li>
+        <li>Lotofácil (<code class="has-text-weight-light">lotofacil</code>)</li>
+        <li>Quina (<code class="has-text-weight-light">quina</code>)</li>
+        <li>Lotomania (<code class="has-text-weight-light">lotomania</code>)</li>
+        <li>Timemania(<code class="has-text-weight-light">timemania</code>)</li>
+        <li>Dupla Sena (<code class="has-text-weight-light">duplasena</code>)</li>
+        <li>Federal (<code class="has-text-weight-light">federal</code>)</li>
+        <li>Loteca (<code class="has-text-weight-light">loteca</code>)</li>
+        <li>Dia de Sorte (<code class="has-text-weight-light">diadesorte</code>)</li>
+        <li>Super Sete (<code class="has-text-weight-light">supersete</code>)</li>
     </ul>
-    <h3>Third level</h3>
-    <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac
-        tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
-    <ol>
-        <li>Donec blandit a lorem id convallis.</li>
-        <li>Cras gravida arcu at diam gravida gravida.</li>
-        <li>Integer in volutpat libero.</li>
-        <li>Donec a diam tellus.</li>
-        <li>Aenean nec tortor orci.</li>
-        <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
-        <li>Vivamus maximus ultricies pulvinar.</li>
-    </ol>
-    <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est
-        tellus sit amet turpis.</blockquote>
-    <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas
-        ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
-    <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas
-        vestibulum interdum commodo.</p>
-    <dl>
-        <dt>Web</dt>
-        <dd>The part of the Internet that contains websites and web pages</dd>
-        <dt>HTML</dt>
-        <dd>A markup language for creating web pages</dd>
-        <dt>CSS</dt>
-        <dd>A technology to make HTML look better</dd>
-    </dl>
-    <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis
-        malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
-    <h4>Fourth level</h4>
-    <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at
-        elementum ex efficitur.</p>
-    <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Hello World&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-    <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula.
-        Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
+
+    <h3>Endpoints</h3>
+
+    <h4>Listar o último resultado de cada loteria</h4>
+    <blockquote>
+        <p><strong>GET </strong><a href="https://lottolookup.com.br/api">https://lottolookup.com.br/api</a></p>
+        <p class="has-text-weight-light">Retorna o último resultado disponível para cada loteria.</p>
+    </blockquote>
+
+    <h4>Listar os últimos 10 resultados de uma loteria específica</h4>
+    <blockquote>
+        <p><strong>GET </strong><a
+                href="https://lottolookup.com.br/api/megasena">https://lottolookup.com.br/api/&lt;nomedaloteria&gt;</a>
+        </p>
+        <p class="has-text-weight-light">Substitua &lt;nomedaloteria&gt; pelo identificador da loteria para obter os 10
+            últimos resultados.</p>
+    </blockquote>
+    <p>Exemplo:</p>
+    <blockquote>
+        <p><strong>GET </strong><a
+                href="https://lottolookup.com.br/api/megasena">https://lottolookup.com.br/api/megasena</a></p>
+        <p class="has-text-weight-light">Para consultar os últimos 10 resultados da Mega-Sena.</p>
+    </blockquote>
+
+    <h4>Consultar um resultado por um número de jogo</h4>
+    <blockquote>
+        <p><strong>GET </strong><a
+                href="https://lottolookup.com.br/api/megasena/2689">https://lottolookup.com.br/api/&lt;nomedaloteria&gt;/&lt;numerodojogo&gt;</a>
+        </p>
+        <p class="has-text-weight-light">Substitua &lt;nomedaloteria&gt; pelo identificador da loteria e
+            &lt;numerodojogo&gt; pelo número específico do jogo a ser consultado.</p>
+    </blockquote>
+    <p>Exemplo:</p>
+    <blockquote>
+        <p><strong>GET </strong><a
+                href="https://lottolookup.com.br/api/megasena/2689">https://lottolookup.com.br/api/megasena/2689</a></p>
+        <p class="has-text-weight-light">Para consultar o resultado da Mega-Sena de número 2689.</p>
+    </blockquote>
+    <article class="message">
+        <div class="message-header">
+            <p><i class="fa-solid fa-triangle-exclamation"></i> Atenção</p>
+        </div>
+        <div class="message-body">
+            <p>
+                Apenas resultados à partir do dia 22/02/2024 (data de lançamento deste serviço) estão disponíveis para
+                consulta.
+            </p>
+        </div>
+    </article>
+
+    <h4>Consultar o último resultado de uma loteria específica</h4>
+    <blockquote>
+        <p><strong>GET </strong><a
+                href="https://lottolookup.com.br/api/megasena/latest">https://lottolookup.com.br/api/&lt;nomedaloteria&gt;/latest</a>
+        </p>
+        <p class="has-text-weight-light">Substitua &lt;nomedaloteria&gt; pelo identificador da loteria.</p>
+    </blockquote>
+    <p>Exemplo:</p>
+    <blockquote>
+        <p><strong>GET </strong><a
+                href="https://lottolookup.com.br/api/megasena/latest">https://lottolookup.com.br/api/megasena/latest</a>
+        </p>
+        <p class="has-text-weight-light">Para consultar o último resultado da Mega-Sena.</p>
+    </blockquote>
+
+    <h3>Limites de requisição</h3>
+    <p>
+        A API é aberta e pode ser utilizada por qualquer pessoa, sujeita a um limite de 60 requisições por minuto por
+        endereço IP para garantir a qualidade e a disponibilidade do serviço para todos os usuários.
+    </p>
+
+    <article class="message">
+        <div class="message-header">
+            <p><i class="fa-solid fa-server"></i> Planos privados</p>
+        </div>
+        <div class="message-body">
+            <p>
+                A API LottoLookup é uma API pública e gratuita. No entanto, para evitar abusos,
+                limitamos o número de consultas por IP. Se você precisar de mais consultas, entre em contato conosco
+                para discutir opções de assinatura de hospedagem exclusiva e privada.
+            </p>
+        </div>
+    </article>
+
+    <h3>Códigos de resposta HTTP</h3>
+    <p>A API LottoLookup utiliza os seguintes códigos de resposta HTTP:</p>
     <table>
         <thead>
             <tr>
-                <th>One</th>
-                <th>Two</th>
+                <th>Código</th>
+                <th>Descrição</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Three</td>
-                <td>Four</td>
+                <td>200 OK</td>
+                <td>A requisição foi bem-sucedida</td>
             </tr>
             <tr>
-                <td>Five</td>
-                <td>Six</td>
+                <td>404 Not Found</td>
+                <td>O recurso solicitado (loteria ou número do jogo) não foi encontrado</td>
             </tr>
             <tr>
-                <td>Seven</td>
-                <td>Eight</td>
-            </tr>
-            <tr>
-                <td>Nine</td>
-                <td>Ten</td>
-            </tr>
-            <tr>
-                <td>Eleven</td>
-                <td>Twelve</td>
+                <td>429 Too Many Requests</td>
+                <td>Excedeu o limite de requisições permitidas por minuto</td>
             </tr>
         </tbody>
     </table>
-    <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis.
-        Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam
-        tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est.
-        Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam
-        nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra
-        varius metus non pellentesque.</p>
-    <h5>Fifth level</h5>
-    <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent
-        aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue
-        laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
-    <figure>
-        <img src="https://bulma.io/images/placeholders/256x256.png">
-        <img src="https://bulma.io/images/placeholders/256x256.png">
-        <figcaption>
-            Figure 1: Some beautiful placeholders
-        </figcaption>
-    </figure>
-    <h6>Sixth level</h6>
-    <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros
-        accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae,
-        malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum
-        commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
+
+    <h3>Exemplo de resposta</h3>
+    <blockquote>
+        <p><strong>GET </strong><a
+                href="https://lottolookup.com.br/api/megasena/2689">https://lottolookup.com.br/api/megasena/2689</a></p>
+    </blockquote>
+    <p>Uma resposta típica da API LottoLookup é um objeto JSON, com a seguinte estrutura:</p>
+    <pre>{
+    "acumulado": true,
+    "dataApuracao": "17/02/2024",
+    "dataProximoConcurso": "20/02/2024",
+    "dezenasSorteadasOrdemSorteio": [
+        "16",
+        "48",
+        "52",
+        "47",
+        "09",
+        "20"
+    ],
+    "exibirDetalhamentoPorCidade": true,
+    "id": null,
+    "indicadorConcursoEspecial": 1,
+    "listaDezenas": [
+        "09",
+        "16",
+        "20",
+        "47",
+        "48",
+        "52"
+    ],
+    "listaDezenasSegundoSorteio": null,
+    "listaMunicipioUFGanhadores": [],
+    "listaRateioPremio": [
+        {
+            "descricaoFaixa": "6 acertos",
+            "faixa": 1,
+            "numeroDeGanhadores": 0,
+            "valorPremio": 0
+        },
+        {
+            "descricaoFaixa": "5 acertos",
+            "faixa": 2,
+            "numeroDeGanhadores": 65,
+            "valorPremio": 65325.01
+        },
+        {
+            "descricaoFaixa": "4 acertos",
+            "faixa": 3,
+            "numeroDeGanhadores": 4926,
+            "valorPremio": 1231.4
+        }
+    ],
+    "listaResultadoEquipeEsportiva": null,
+    "localSorteio": "ESPAÇO DA SORTE",
+    "nomeMunicipioUFSorteio": "SÃO PAULO,  SP",
+    "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000",
+    "numero": 2689,
+    "numeroConcursoAnterior": 2688,
+    "numeroConcursoFinal_0_5": 2690,
+    "numeroConcursoProximo": 2690,
+    "numeroJogo": 2,
+    "observacao": "",
+    "premiacaoContingencia": null,
+    "tipoJogo": "MEGA_SENA",
+    "tipoPublicacao": 3,
+    "ultimoConcurso": true,
+    "valorArrecadado": 73646500,
+    "valorAcumuladoConcurso_0_5": 78913962.98,
+    "valorAcumuladoConcursoEspecial": 15809984.28,
+    "valorAcumuladoProximoConcurso": 78913962.98,
+    "valorEstimadoProximoConcurso": 87000000,
+    "valorSaldoReservaGarantidora": 0,
+    "valorTotalPremioFaixaUm": 0
+}</pre>
+
+    <h3>Contato</h3>
+    <p>
+        Se você tiver alguma dúvida, sugestão ou precisar de assistência, entre em contato comigo pelo e-mail
+        <a href="mailto:suporte@rodrigoweiss.com" class="is-underlined">suporte@rodrigoweiss.com</a>.
+
 </div>
 
 <footer class="footer is-default">
-  <div class="content has-text-centered">
-    <p>
-      <strong>LottoLookup</strong> desenvolvido é por <a href="https://rodrigoweiss.com" class="is-underlined">Rodrigo Weiss</a>. <br>
-      O código fonte é licenciado pelo
-      <a href="https://opensource.org/blog/license/mit" class="is-underlined">MIT</a>.
-    </p>
-  </div>
+    <div class="content has-text-centered">
+        <p>
+            <strong>LottoLookup</strong> desenvolvido é por <a href="https://rodrigoweiss.com"
+                class="is-underlined">Rodrigo Weiss</a>. <br>
+            O código fonte é licenciado pelo
+            <a href="https://opensource.org/blog/license/mit" class="is-underlined">MIT</a>.
+        </p>
+    </div>
 </footer>
 <?= $this->endSection() ?>

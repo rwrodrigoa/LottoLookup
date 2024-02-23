@@ -15,6 +15,11 @@ a.navbar-item:hover {
     color: #363636;
 }
 
+.message-header {
+    color: #363636;
+    background-color: #FFBBC2;
+}
+
 
 .is-default {
     color: #363636;
