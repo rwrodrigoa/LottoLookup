@@ -1,67 +1,55 @@
-# CodeIgniter 4 Application Starter
+# API LottoLookup
 
-## What is CodeIgniter?
+API LottoLookup oferece acesso programático aos resultados dos jogos de loteria da Caixa Econômica Federal, incluindo Mega-Sena, Lotofácil, Quina, e muitos outros.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Funcionalidades
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- Consulta do último resultado de cada loteria.
+- Listagem dos últimos 10 resultados de um loteria específica.
+- Consulta de um resultado específico por número do jogo.
+- Consulta do último resultado de uma loteria específica.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Começando
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+Para começar a usar a API LottoLookup, você não precisa de autenticação. A API é aberta e pode ser acessada diretamente através da URL base `https://lottolookup.com.br/api`.
 
-## Installation & updates
+### Pré-requisitos
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Não há pré-requisitos para consumir esta API, além de uma ferramenta para fazer requisições HTTP, como cURL ou Postman, ou uma biblioteca HTTP na linguagem de programação de sua escolha.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### Fazendo Requisições
 
-## Setup
+Aqui está um exemplo de como consultar o último resultado da Mega-Sena usando cURL:
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+```bash
+curl https://lottolookup.com.br/api/megasena/latest
+```
 
-## Important Change with index.php
+### Documentação
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Para mais informações sobre os endpoints disponíveis e detalhes sobre as respostas da API, visite nossa documentação completa disponível em: https://lottolookup.com.br.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### Limitações
 
-**Please** read the user guide for a better explanation of how CI4 works!
+A API permite até 60 requisições por minuto por endereço IP, a fim de garantir a qualidade do serviço para todos os usuários.
 
-## Repository Management
+### Contribuindo
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Contribuições para a API LottoLookup são bem-vindas! Aqui estão algumas maneiras de contribuir:
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+- Reportando bugs
+- Sugerindo melhorias
+- Deixando uma estrela para o projeto
 
-## Server Requirements
+### Licença
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para detalhes.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+### Contato
 
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
+Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato através do e-mail suporte@rodrigoweiss.com.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### Agradecimentos
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- A todos os usuário que confiam e apoiam o meu trabalho.
+- À Caixa Econômica Federal por disponibilizar os dados das loterias.
