@@ -49,7 +49,8 @@ class DrawsUpdate extends BaseCommand
         $drawResultModel = new DrawResultModel();
 
         foreach ($apiHelper->draws as $url) {
-            $fullUrl = 'https://servicebus2.caixa.gov.br/portaldeloterias/api/' . $url;
+            //https://servicebus2.caixa.gov.br/portaldeloterias/api/
+            $fullUrl = 'https://api.guidi.dev.br/loteria/' . $url . '/ultimo';
 
             try {
                 $data = $apiHelper->fetchDataFromApi($fullUrl);
