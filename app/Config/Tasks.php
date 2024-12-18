@@ -45,7 +45,7 @@ class Tasks extends BaseTasks
      */
     public function init(Scheduler $schedule)
     {
-        $schedule->command('draws:update')->hours([21,23])->minutes([0]);
+        $schedule->command('draws:update')->hours([00, 01])->minutes([0]);
         //$schedule->command('draws:update')->hours([21,22,23])->minutes([30]);
     }
 }
